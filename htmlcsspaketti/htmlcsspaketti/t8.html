@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>
+            Hello World!
+        </title>
+        <style>
+            form input, form label {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="https://villenphptesti.azurewebsites.net/test.php" method="GET">
+            <label for="nimi">Nimi</label>
+            <input type="text" name="nimi">
+            <label for="vuosikurssi">Vuosikurssi</label>
+            <input type="password" name="vuosikurssi">
+            <label for="kurssinnimi">Kurssin nimi</label>
+            <select name="kurssinnimi">
+                <option value="ohjelmointi">Ohjelmointi</option>
+                <option value="matematiikka">Matematiikka</option>
+                <option value="saksa">Saksa</option>
+            </select>
+            <label for="kurssintyyppi">Kurssin tyyppi</label>
+            <select name="kurssintyyppi">
+                <option value="kieli">Pakollinen</option>
+                <option value="tekniikka">Valinnainen</option>
+            </select><br>
+            <label for="sukupuoli">Sukupuoli</label><br>
+            <input type="radio" name="sukupuoli" value="mies">Mies
+            <input type="radio" name="sukupuoli" value="nainen">Nainen<br><br>
+            <label for="hobbies">Harrastukset</label>
+            <input type="checkbox" name="hobbies" value="ohjelmointi">ohjelmointi
+            <input type="checkbox" name="pyoraily" value="true">pyöräily
+            <input type="checkbox" name="pelaaminen" value="true" checked>pelaaminen
+            <input type="checkbox" name="jalkapallo" value="true">jalkapallo
+            <input type="submit" value="Lähetä">
+        </form>
+    </body>
+</html>

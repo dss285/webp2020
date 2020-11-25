@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .container {
+            display:flex;
+            flex-flow: row wrap;
+        }
+        .container > div {
+            border:1px solid black;
+            flex-basis: 33%;
+            font-size:600%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- P elementti tekee tasasemmaksi  -->
+    <div class="container">
+        <div data="1"><p>1</p></div>
+        <div data="2"><p>2</p></div>
+        <div data="3"><p>3</p></div>
+        <div data="4"><p>4</p></div>
+        <div data="5"><p>5</p></div>
+        <div data="6"><p>6</p></div>
+        <div data="7"><p>7</p></div>
+        <div data="8"><p>8</p></div>
+        <div data="9"><p>9</p></div>
+    </div>
+    <script>
+        "use strict";
+        $("div.container > div").click(function() {
+
+            var data = $(this).attr('data')
+            if($(this).children().text().includes("Valittu")) {
+                $(this).css({
+                "background-color" : "",
+                "color" : ""
+                })
+            $(this).children().text(data) 
+            } else {
+                $(this).css({
+                "background-color" : "red",
+                "color" : "white"
+                })
+                $(this).children().text("Valittu")
+            }
+        })
+    </script>
+</body>
+</html>

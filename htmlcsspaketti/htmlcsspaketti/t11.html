@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>
+            Hello World!
+        </title>
+        <style>
+            table {
+                width:100%;
+                table-layout: fixed;
+            }
+
+            table, tr, td {
+                border:1px solid black;
+                border-collapse: collapse;
+            }
+            td:nth-child(1) {
+                width:10%;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+        <form action="https://villenphptesti.azurewebsites.net/test.php" method="GET">
+            
+                <tr>
+                    <td><label for="nimi">Nimi</label></td>
+                    <td><input type="text" name="nimi"></td>
+                </tr>
+                <tr>
+                    <td><label for="oppilaitos">Oppilaitos</label></td>
+                    <td><input type="text" disabled value="Savonia AMK"></td>
+                </tr>
+                
+                <tr>
+                    <td><label for="vuosikurssi">Vuosikurssi</label></td>
+                    <td><input type="password" name="vuosikurssi"></td>
+                </tr>
+                <tr>
+                    <td><label for="kurssinnimi">Kurssin nimi</label></td>
+                    <td>
+                        <select name="kurssinnimi" multiple>
+                            <optgroup label="Pakollinen">
+                                <option value="ohjelmointi">Ohjelmointi</option>
+                                <option value="matematiikka">Matematiikka</option>
+                            </optgroup>
+                            <optgroup label="Valinnainen">
+                                <option value="saksa">Saksa</option>
+                            </optgroup>
+
+                        </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><label for="kurssintyyppi">Kurssin tyyppi</label></td>
+                    <td>
+                        <select name="kurssintyyppi">
+                            <option value="kieli">Pakollinen</option>
+                            <option value="tekniikka">Valinnainen</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="sukupuoli">Sukupuoli</label></td>
+                    <td><input type="radio" name="sukupuoli" value="mies">Mies<br>
+                    <input type="radio" name="sukupuoli" value="nainen">Nainen</td>
+                </tr>
+                
+                <tr>
+                    <td><label for="hobbies">Harrastukset</label></td>
+                    <td><input type="checkbox" name="hobbies" value="ohjelmointi">ohjelmointi<br>
+                    <input type="checkbox" name="pyoraily" value="true">pyöräily<br>
+                    <input type="checkbox" name="pelaaminen" value="true" checked>pelaaminen<br>
+                    <input type="checkbox" name="jalkapallo" value="true">jalkapallo</td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit">
+                            <img src="t11.png">
+                        </button>
+                    </td>
+                </tr>
+            
+        </form>
+    </table>
+    </body>
+</html>

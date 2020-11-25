@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" onclick="artikkelitoggle(0)">Artikkeli 1</a>
+    <a href="#" onclick="artikkelitoggle(1)">Artikkeli 2</a>
+    <a href="#" onclick="artikkelitoggle(2)">Artikkeli 3</a>
+    <a href="#" onclick="artikkelitoggle(3)">Artikkeli 4</a>
+    <article>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ornare hendrerit commodo. Morbi dui purus, fermentum non sapien et, volutpat gravida urna. Etiam consectetur maximus ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam quis nulla urna. Curabitur egestas mi sed sollicitudin facilisis. Sed tincidunt porttitor sagittis. Vivamus in feugiat nisi. Sed non elit a sapien lacinia ornare. Phasellus posuere a turpis a ultricies. Suspendisse suscipit, velit vitae scelerisque cursus, sem eros egestas justo, vitae pretium risus sem at turpis. Vestibulum ac enim id magna vulputate mattis. 
+    </article>
+    <article>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ornare hendrerit commodo. Morbi dui purus, fermentum non sapien et, volutpat gravida urna. Etiam consectetur maximus ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam quis nulla urna. Curabitur egestas mi sed sollicitudin facilisis. Sed tincidunt porttitor sagittis. Vivamus in feugiat nisi. Sed non elit a sapien lacinia ornare. Phasellus posuere a turpis a ultricies. Suspendisse suscipit, velit vitae scelerisque cursus, sem eros egestas justo, vitae pretium risus sem at turpis. Vestibulum ac enim id magna vulputate mattis. 
+    </article>
+
+    <article>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ornare hendrerit commodo. Morbi dui purus, fermentum non sapien et, volutpat gravida urna. Etiam consectetur maximus ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam quis nulla urna. Curabitur egestas mi sed sollicitudin facilisis. Sed tincidunt porttitor sagittis. Vivamus in feugiat nisi. Sed non elit a sapien lacinia ornare. Phasellus posuere a turpis a ultricies. Suspendisse suscipit, velit vitae scelerisque cursus, sem eros egestas justo, vitae pretium risus sem at turpis. Vestibulum ac enim id magna vulputate mattis. 
+    </article>
+
+    <article>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ornare hendrerit commodo. Morbi dui purus, fermentum non sapien et, volutpat gravida urna. Etiam consectetur maximus ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam quis nulla urna. Curabitur egestas mi sed sollicitudin facilisis. Sed tincidunt porttitor sagittis. Vivamus in feugiat nisi. Sed non elit a sapien lacinia ornare. Phasellus posuere a turpis a ultricies. Suspendisse suscipit, velit vitae scelerisque cursus, sem eros egestas justo, vitae pretium risus sem at turpis. Vestibulum ac enim id magna vulputate mattis. 
+    </article>
+    <script>
+        function artikkelitoggle(mones) {
+            var artikkelit = document.querySelectorAll("article");
+            for(var i = 0;i<artikkelit.length;i++) {
+                if(i == mones) {
+                    artikkelit[i].style.visibility = "visible";
+                } else {
+                    artikkelit[i].style.visibility = "hidden";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

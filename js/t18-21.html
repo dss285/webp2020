@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="t21.js"></script>
+    <script>
+        "use strict";
+        /*
+        tehtävä 18
+        */
+        function ympyranPintaala(sade) {
+            return Math.PI*sade**2;
+        }
+        console.log(ympyranPintaala(1));
+
+        /*
+            tehtävä19
+        */
+        function taulukkotieto(taulukko) {
+            var min;
+            var max;
+            var summa = 0;
+            for(var alkio of taulukko) {
+                summa += alkio;
+                if(min == null) {
+                    min = alkio;
+                }
+                if(max == null) {
+                    max = alkio;
+                }
+                if(min > alkio) {
+                    min = alkio
+                }
+                if(max < alkio) {
+                    max = alkio;
+                }
+            }
+            console.log("min: "+min);
+            console.log("max: "+max);
+            console.log("summa: "+summa);
+            console.log("keskiarvo "+summa/taulukko.length);
+        }
+        taulukkotieto([3, 6, 1, 9, 12, 43, 21]);
+        /*
+            tehtävä 20
+        */
+        function tehtava20(kanta) {
+            for(var i = 1;i<kanta+1;i++) {
+                 console.log(i+" potenssiin "+(i-1)+" on "+i**(i-1))
+            }
+        }
+        tehtava20(10);
+        /*
+            tehtävä 21
+        */
+        kysyNimi();
+    </script>
+</body>
+</html>

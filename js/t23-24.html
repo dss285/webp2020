@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width:100%;
+        }
+        table, tr, td {
+            border:1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    Käyttäjä: <input type="text" id="kayttaja">
+    Osoite: <input type="text" id="osoite">
+    <button onclick="lisaa()">Lisää käyttäjä</button>
+    <table>
+        <tr><th>Nimi</th><th>Osoite</th></tr>
+    </table>
+    <script>
+        "use strict";
+        function lisaa() {
+            var table = document.querySelector("table");
+
+            var row = document.createElement("tr");
+            var col1 = document.createElement("td");
+            var col2 = document.createElement("td");
+
+            var nimi = document.querySelector("input#kayttaja");
+            var osoite = document.querySelector("input#osoite");
+            if(nimi.value == "") {
+                nimi.style.backgroundColor = "red";
+                return;
+            } else {
+                nimi.style.backgroundColor = "";
+            }
+            if(osoite.value == "") {
+                osoite.style.backgroundColor = "red";
+                return;
+            } else {
+                osoite.style.backgroundColor = "";
+            }
+            col1.innerHTML = nimi.value;
+            col2.innerHTML = osoite.value;
+            row.appendChild(col1);
+            row.appendChild(col2);
+            table.appendChild(row);
+        }
+    </script>
+</body>
+</html>

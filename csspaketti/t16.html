@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>
+        Hello World!
+    </title>
+    <style>
+        .grid-container {
+            display: grid;
+            padding: 2em;
+            grid-template-columns: auto;
+            grid-gap: 20px;
+        }
+        .grid-container > div {
+            background-color: lightgrey;
+            width:100%;
+            height:100%;
+            padding:0.5em;
+        }
+        label {
+            display:block;
+        }
+    </style>
+</head>
+
+<body>
+    
+        <form action="https://villenphptesti.azurewebsites.net/test.php" method="GET">
+            <div class="grid-container">
+            <div>
+                <label for="nimi">Nimi</label>
+                <input type="text" name="nimi">
+                <label for="vuosikurssi">Vuosikurssi</label>
+                <input type="password" name="vuosikurssi">
+            </div>
+            <div>
+                <label for="kurssinnimi">Kurssin nimi</label>
+                <select name="kurssinnimi">
+                    <option value="ohjelmointi">Ohjelmointi</option>
+                    <option value="matematiikka">Matematiikka</option>
+                    <option value="saksa">Saksa</option>
+                </select>
+            </div>
+            <div>
+                <label for="kurssintyyppi">Kurssin tyyppi</label>
+                <select name="kurssintyyppi">
+                    <option value="kieli">Pakollinen</option>
+                    <option value="tekniikka">Valinnainen</option>
+                </select><br>
+            </div>
+            <div>
+                <label for="sukupuoli">Sukupuoli</label><br>
+                <input type="radio" name="sukupuoli" value="mies">Mies
+                <input type="radio" name="sukupuoli" value="nainen">Nainen<br><br>
+            </div>
+            <div>
+                <label for="hobbies">Harrastukset</label>
+                <input type="checkbox" name="hobbies" value="ohjelmointi">ohjelmointi
+                <input type="checkbox" name="pyoraily" value="true">pyöräily
+                <input type="checkbox" name="pelaaminen" value="true" checked>pelaaminen
+                <input type="checkbox" name="jalkapallo" value="true">jalkapallo
+            </div>
+            <div><input type="submit" value="Lähetä"></div>
+            </div>
+        </form>
+</body>
+
+</html>

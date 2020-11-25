@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery Ajax tehtäväpohja</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/ajax.js"></script>
+</head>
+
+<body>
+    <div id="dialog" style="display: none;">
+        <form class="lisays">
+            Nimi:<br>
+            <input type="text" name="nimi"><br>
+            Osoite:<br>
+            <input type="text" name="osoite"><br>
+            Postinumero<br>
+            <input type="text" name="postinro"><br>
+            Postitoimipaikka<br>
+            <input type="text" name="postitmp"><br>
+            <select name="asty_avain"><br>
+            </select>
+            <input type="submit">
+        </form>
+    </div>
+    <button id="lisaaBtn">Lisää</button>
+    <form class="haku">
+        Nimi:<br>
+        <input type="text" name="nimi"><br>
+        Osoite:<br>
+        <input type="text" name="osoite">
+        <select name="asty_avain">
+        </select>
+        <input type="submit">
+    </form>
+    <div class="dataTable" id="dataTable">
+        <table class="data" id="data">
+            <thead>
+                <tr>
+                    <th>Nimi</th>
+                    <th>Osoite</th>
+                    <th>Postinumero</th>
+                    <th>Postitoimipaikka</th>
+                    <th>Luontipäivämäärä</th>
+                    <th>Asiakastyyppi</th>
+                    <th>
+                        Poista
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

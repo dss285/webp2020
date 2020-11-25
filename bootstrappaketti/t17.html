@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #cfcfcf;
+        }
+
+        main,
+        footer {
+            background-color: white;
+            padding: 1%;
+        }
+        main {
+            margin-bottom: 0.25em;
+        }
+
+        footer div ul {
+            list-style: none;
+        }
+
+        .navbar {
+            background-color: rgb(186, 225, 255);
+        }
+
+        nav form>* {
+            margin-right: 1em;
+        }
+
+        .btn-lightblue {
+            background-color: rgb(186, 225, 255);
+            border: 1px solid green;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="modal fade" id="dialog" role="dialog" tabindex="-1" aria-labelledby="modal-title"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tietojen tarkistus</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Sulje">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Tarkista ovatko ao. tiedot oikein.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Tallenna tiedot</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Sulje</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#"><img src="savonia.png"></a>
+        <form class="form-inline">
+            <input type="text" placeholder="Tunnus" class="form-control">
+            <input type="password" placeholder="Salasana" class="form-control">
+            <button type="submit" class="btn btn-lightblue">Kirjaudu</button>
+        </form>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a href="#" class="nav-link">Alkuun</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Wilma</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Reppu</a></li>
+            <li class="nav-item"><a href="#" class="nav-link dropdown-toggle">Työkalut</a></li>
+            <div class="dropdown-menu"></div>
+        </ul>
+    </nav>
+
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <form>
+                    <div class="form-group">
+                        <label for="opiskelijanumero">Opiskelijanumero</label>
+                        <input type="text" name="opiskelijanumero" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="aloitusvuosi">Aloitusvuosi</label>
+                        <input type="text" name="aloitusvuosi" class="form-control">
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name="muistaminut" class="form-check-input">
+                        <label for="muistaminut" class="form-check-label">Muista minut</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-toggle="modal"
+                        data-target="#dialog">Tarkista</button>
+                </form>
+            </div>
+            <div class="col-sm-12 col-md-8 col-lg-8">
+                <table class="table">
+                    <tr>
+                        <th>Opintojakso</th>
+                        <th>Suorituspvm</th>
+                        <th>Arvosana</th>
+                    </tr>
+                    <tr>
+                        <td>Ohjelmoinnin perusteet</td>
+                        <td>3.4.2016</td>
+                        <td>2/5</td>
+                    </tr>
+                    <tr>
+                        <td>Tietorakenteet ja algoritmit</td>
+                        <td>16.2.2016</td>
+                        <td>5/5</td>
+                    </tr>
+                    <tr>
+                        <td>Matematiikka I</td>
+                        <td>28.1.2015</td>
+                        <td>4/5</td>
+                    </tr>
+                    <tr>
+                        <td>Matematiikka II</td>
+                        <td>11.9.2015</td>
+                        <td>3/5</td>
+                    </tr>
+                    <tr>
+                        <td>Fysiikka I</td>
+                        <td>28.11.2014</td>
+                        <td>4/5</td>
+                    </tr>
+                </table>
+
+            </div>
+
+
+        </div>
+    </main>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-4"><small>&copy; 2017-2018</small></div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <h4>Toimipaikat</h4>
+                <ul>
+                    <li>Opistotie</li>
+                    <li>Technopolis</li>
+                    <li>Iisalmi</li>
+                    <li>Varkaus</li>
+                </ul>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <h4>Tietoja</h4>
+                <ul>
+                    <li>Yhteystiedot</li>
+                    <li>GRPD</li>
+                    <LI>Ota yhteyttä</LI>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

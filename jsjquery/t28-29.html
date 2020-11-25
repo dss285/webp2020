@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        class Oppilas {
+            constructor(nimi, syntymavuosi, osoite, puh) {
+                this.nimi = nimi;
+                this.syntymavuosi = syntymavuosi;
+                this.osoite = osoite;
+                this.puh = puh;
+                this.arvosanat = []
+            }
+            get nimi() {
+                return this._nimi;
+            }
+            set nimi(nimi) {
+                this._nimi = nimi;
+            }
+            get syntymavuosi() {
+                return this._syntymavuosi;
+            }
+            set syntymavuosi(syntymavuosi) {
+                this._syntymavuosi = syntymavuosi;
+            }
+            get osoite() {
+                return this._osoite;
+            }
+            set osoite(osoite) {
+                this._osoite = osoite;
+            }
+            get puh() {
+                return this._puh;
+            }
+            set puh(puh) {
+                this._puh = puh;
+            }
+            tulosta() {
+                console.log(this.nimi);
+                console.log(this.syntymavuosi);
+                console.log(this.osoite);
+                console.log(this.puh);
+            }
+            laskeIka() {
+                return  new Date().getFullYear()-this.syntymavuosi.getFullYear();;
+            }
+            lisaaArvosana(oppiaine, arvosana, suorituspvm) {
+                var arvosana = new Arvosana(oppiaine, arvosana, suorituspvm);
+                this.arvosanat.push(arvosana);
+            }
+            printArvosana() {
+                for(var i of this.arvosanat) {
+                    console.log(i.oppiaine + " " + i.arvosana + " " + i.suorituspvm.toString());
+                }
+            }
+            get HyvaOppilas() {
+                return this.arvosanat.some((element) => 5 <= element.arvosana)
+            }
+            get KurssitLapi() {
+                return this.arvosanat.every((element) => 0 < element.arvosana)
+            }
+            get MuutaAsteikko() {
+                var taulukko = this.arvosanat.map((element) => Math.ceil(element.arvosana/2));
+                return taulukko.map((element) => 
+                    element.toString()
+                    .replace("1", "I")
+                    .replace("2", "II")
+                    .replace("3", "III")
+                    .replace("4", "IV")
+                    .replace("5", "V")
+                );
+            }
+        }
+        class Arvosana {
+            constructor(oppiaine, arvosana, suorituspvm) {
+                this.oppiaine = oppiaine;
+                this.arvosana = arvosana;
+                this.suorituspvm = suorituspvm;
+            }
+            get oppiaine() {
+                return this._oppiaine;
+            }
+            get arvosana() {
+                return this._arvosana;
+            }
+            get suorituspvm() {
+                return this._suorituspvm;
+            }
+            set oppiaine(oppiaine) {
+                this._oppiaine = oppiaine;
+            }
+            set arvosana(arvosana) {
+                if(11 > arvosana >= 0) {
+                    this._arvosana = arvosana;
+                } else {
+                    this._arvosana = 0;
+                }
+            }
+            set suorituspvm(suorituspvm) {
+                this._suorituspvm = suorituspvm;
+            }
+
+        }
+        var ss = new Oppilas("Tommi", new Date(2000, 1, 22), "sss", "000 0000000");
+        ss.tulosta();
+        console.log(ss.laskeIka());
+        ss.lisaaArvosana("Ohjelmointi 3", 2, new Date(2020, 4, 4));
+        ss.lisaaArvosana("Ohjelmistotuotanto", 4, new Date(2020, 5, 1));
+        ss.lisaaArvosana("ss", 6, new Date(2020, 5, 1));
+        ss.lisaaArvosana("ss", 8, new Date(2020, 5, 1));
+        ss.lisaaArvosana("ss", 10, new Date(2020, 5, 1));
+        ss.printArvosana();
+        console.log(ss.HyvaOppilas);
+        console.log(ss.KurssitLapi);
+        console.log(ss.MuutaAsteikko);
+    </script>
+</body>
+</html>

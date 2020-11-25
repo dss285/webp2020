@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <title>
+        Hello World!
+    </title>
+    <style>
+        .grid-container {
+            display: grid;
+            padding: 2em;
+            grid-template-columns: auto auto auto auto auto;
+            grid-gap: 0.5em;
+        }
+
+        .grid-container>div {
+            background-color: lightgrey;
+            width: 100%;
+            height:100%;
+            padding:0.1em;
+            text-align: center;
+            align-self: center;
+            vertical-align: middle;
+        }
+
+
+        .grid-header {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-header" style="grid-row-start: 1;grid-row-end: 3;grid-column-start: 1;grid-column-end: 3;">
+            Henkilöstö
+        </div>
+        <div class="grid-header" style="grid-column-start: 3; grid-column-end: 6;">
+            Koulutus
+        </div>
+
+        <div class="grid-header">Muu</div>
+        <div class="grid-header">Ammatti-korkeakoulu</div>
+        <div class="grid-header">Korkeakoulu</div>
+
+        <div style="grid-row-start: 3;grid-row-end: 6;">Ikä</div>
+        <div>- 30</div>
+        <div><a href="https://google.com/">Google.com</a></div>
+        <div></div>
+        <div></div>
+
+        <div>30 -50</div>
+        <div></div>
+        <div>
+            <ol>
+                <li>1. Tavara</li>
+                <li>2. Tavara</li>
+                <li>3. Tavara</li>
+            </ol>
+        </div>
+        <div></div>
+
+        <div>50 -</div>
+        <div>Tavallinen teksti</div>
+        <div>
+            <p style="font-weight: bold;">Lihavoitu teksti</p>
+        </div>
+        <div>
+            <p style="font-size: 200%;">Isompi teksti</p>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

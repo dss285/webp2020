@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>
+            Hello World!
+        </title>
+        <style>
+            .flex-container {
+                display: flex;
+                flex-flow: row wrap;
+                align-items: center;
+                justify-content: space-between;
+                align-items: stretch;
+            }
+            .flex-container > div {
+                background-color: gold;
+                padding:20px;
+                flex-grow: 1;
+                margin-bottom:1em;
+            }
+            .item1 {
+                flex-basis:100%;
+                width:100%;
+                text-align: center;
+            }
+            .item3 {
+                flex-basis: 50%;
+                margin-left:5px;
+                margin-right: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-container">
+            <div class="item1">
+                Tervetuloa Savoniaan!
+            </div>
+
+            <div class="item2">
+                <ul>
+                    <li><a href="#">Opiskelu</a></li>
+                    <li><a href="#">Ruokailu</a></li>
+                    <li><a href="#">IT</a></li>
+                    <li><a href="#">Hallinto</a></li>
+                    <li><a href="#">Vapaa-aika</a></li>
+                    <li><a href="#">Muu</a></li>
+                </ul>
+            </div>
+            <div class="item3">
+                Valitse vasemmalta listalta jotain
+            </div>
+            <div class="item2">
+                Mainoksia
+            </div>
+
+            <div class="item1">
+                Yhteystiedot
+            </div>
+        </div>
+    </body>
+</html>

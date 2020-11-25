@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Syntymäaika (dd.mm.yyyy)</label>
+    <input type="text">
+    <button onclick="ika()">Ikäsi</button>
+    <script>
+        "use strict";
+        function ika() {
+            var input = document.querySelector("input")
+            if(input.value == "") {
+                alert("Kenttä on tyhjä!");
+                return;
+            }
+            /*
+                Regex pattern match
+                [0-9] ottaa numeron
+                {x} toistaa x kertaa
+                \. Tarkoittaa ihan vain pistettä
+            */
+            var re = new RegExp('([0-9]{1,2})\.([0-9]{1,2})\.([0-9]{4})')
+            var data = re.exec(input.value);
+            if(data == null) {
+                alert("Kenttä ei ole oikeassa muodossa!")
+                return;
+            }
+            var vuosi = parseInt(data[3]);
+            var kuukausi = parseInt(data[2]);
+            var paiva = parseInt(data[1]);
+
+            if(!(1 <= paiva <= 31)) {
+                alert("Päivä pitää olla välillä 1-31");
+                return;
+            }
+            if(!(1 <= kuukausi <= 12)) {
+                alert("Kuukausi pitää olla välillä 1-12");
+                return;
+            }
+            if(!(1900 <= vuosi <= 2020)) {
+                alert("Vuosi pitää olla väliltä 1900-2020");
+                return;
+            }
+            var ika = new Date().getFullYear()-vuosi; /*
+                #futureproof
+            */
+            var kuukausiika = new Date().getMonth()-kuukausi;
+            if(kuukausiika > 0) {
+                ika +=1;
+            }
+            console.log(ika);
+            
+        }
+    </script>
+</body>
+</html>

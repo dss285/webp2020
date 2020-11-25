@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>
+            Hello World!
+        </title>
+        <style>
+            .grid-container {
+                display: grid;
+                grid-template-columns: 25% 50% 25%;
+                grid-gap: 10px;
+            }
+            .grid-container > div {
+                background-color:gold;
+                padding:20px;
+            }
+            .grid-container > div > * {
+                margin: auto;
+                width:70%;
+            }
+            .item1 {
+                grid-column-start: 1;
+                grid-column-end: 4;
+                background-color: gold;
+                padding:25px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="item1">
+                Tervetuloa Savoniaan!
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">Opiskelu</a></li>
+                    <li><a href="#">Ruokailu</a></li>
+                    <li><a href="#">IT</a></li>
+                    <li><a href="#">Hallinto</a></li>
+                    <li><a href="#">Vapaa-aika</a></li>
+                    <li><a href="#">Muu</a></li>
+                </ul>
+            </div>
+            <div>
+                Valitse vasemmalta listalta jotain
+            </div>
+            <div>
+                Mainoksia
+            </div>
+            <div class="item1">
+                Yhteystiedot
+            </div>
+
+        </div>
+    </body>
+</html>

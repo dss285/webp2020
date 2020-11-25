@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article {
+            display: none;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+    <a target="1">Linkki 1</a>
+    <a target="2">Linkki 2</a>
+    <a target="3">Linkki 3</a>
+
+    <article>
+        AAssDD
+    </article>
+    <article>
+        asd
+    </article>
+    <article>
+        ASD
+    </article>
+    <script>
+        "use strict";
+        var running = false;
+        $("a").click(function (e) {
+            var val = parseInt($(this).attr('target')) - 1;
+            if(!running) {
+                running = true;
+                $("article").eq(val).fadeIn(2000, function() {
+                    $(this).delay(3000).hide(0, function() {
+                        running = false;
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

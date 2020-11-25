@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kurssi>
+    <luennot>
+        <luennoija>
+            <nimi>Ville Berg</nimi>    
+        </luennoija>
+    </luennot>
+    <luokka>
+        A212
+    </luokka>
+    <luentoaika>
+        <kk>
+        09
+        </kk>
+        <paiva>
+        07
+        </paiva>
+        <klo>
+        8-10
+        </klo>
+        <vuosi>
+        2020
+        </vuosi>
+    </luentoaika>
+    <luentoaika>
+        <kk>
+        09
+        </kk>
+        <paiva>
+        14
+        </paiva>
+        <klo>
+        8-10
+        </klo>
+        <vuosi>
+        2020
+        </vuosi>
+    </luentoaika>
+    <tentti kestoaika="2">
+        <paikka oppilaitos="TEKU">
+
+        </paikka>
+        <tehtava>
+            <maxpisteet>
+                3
+            </maxpisteet>
+            <kysymys>
+                Mikä on HTML ?
+            </kysymys>
+        </tehtava>
+        <tehtava>
+            <maxpisteet>
+                5
+            </maxpisteet>
+            <kysymys>
+                Mikä on CSS ?
+            </kysymys>
+        </tehtava>
+        <tehtava>
+            <maxpisteet>
+                5
+            </maxpisteet>
+            <kysymys>
+                Mikä on XML ?
+            </kysymys>
+        </tehtava>
+    </tentti>
+    <nimi laajuus="5op", tunnus="WEB", kieli="SUOMI">
+        Webohjelmointi
+    </nimi>
+    <kuvaus>
+    HTML5, CSS, JavaScript-alkeet, CSS-kirjaston hyödyntäminen. Server-api:n hyödyntäminen 
+    </kuvaus>
+    <harjoitustyot>
+        <palautuspvm>
+            2020-09-15
+        </palautuspvm>
+        <kuvaus>
+            HTML Tehtävä paketti, css paketit, javascript paketit
+        </kuvaus>
+    </harjoitustyot>
+</kurssi>

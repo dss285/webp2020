@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        class Oppilas {
+            constructor(nimi, syntymavuosi, osoite, puh) {
+                this.nimi = nimi;
+                this.syntymavuosi = syntymavuosi;
+                this.osoite = osoite;
+                this.puh = puh;
+            }
+            get nimi() {
+                return this._nimi;
+            }
+            set nimi(nimi) {
+                this._nimi = nimi;
+            }
+            get syntymavuosi() {
+                return this._syntymavuosi;
+            }
+            set syntymavuosi(syntymavuosi) {
+                this._syntymavuosi = syntymavuosi;
+            }
+            get osoite() {
+                return this._osoite;
+            }
+            set osoite(osoite) {
+                this._osoite = osoite;
+            }
+            get puh() {
+                return this._puh;
+            }
+            set puh(puh) {
+                this._puh = puh;
+            }
+            tulosta() {
+                console.log(this.nimi);
+                console.log(this.syntymavuosi);
+                console.log(this.osoite);
+                console.log(this.puh);
+            }
+            laskeIka() {
+                return  new Date().getFullYear()-this.syntymavuosi.getFullYear();;
+            }
+        }
+        var ss = new Oppilas("Tommi", new Date(2000, 1, 22), "sss", "000 0000000");
+        ss.tulosta();
+        console.log(ss.laskeIka());
+    </script>
+</body>
+</html>

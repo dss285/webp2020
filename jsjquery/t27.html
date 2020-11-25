@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        "use strict";
+        function Oppilas(nimi, syntymavuosi, osoite, puh) {
+            this.nimi = nimi;
+            this.syntymavuosi = syntymavuosi;
+            this.osoite = osoite;
+            this.puh = puh;
+            
+            this.tulosta = function() {
+                console.log(this.nimi);
+                console.log(this.syntymavuosi);
+                console.log(this.osoite);
+                console.log(this.puh);
+            }
+            this.ika = function() {
+                return new Date().getFullYear()-this.syntymavuosi.getFullYear();
+            }
+        }
+        var opp = new Oppilas("Tommi", new Date(2000, 1, 22), "sss", "000 0000000");
+        opp.tulosta();
+        console.log(opp.ika());
+    </script>
+</body>
+</html>
